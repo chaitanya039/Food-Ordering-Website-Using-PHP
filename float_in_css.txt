@@ -1,0 +1,22 @@
+How Does CSS Float Work?
+---------------------------->
+
+What is float exactly and what does it do?
+The float property is misunderstood by most beginners. Well, what exactly does float do? Initially, the float property was introduced to flow text around images, which are floated left or right. Here's another explanation by @Madara Uchicha.
+
+So, is it wrong to use the float property for placing boxes side by side? The answer is no; there is no problem if you use the float property in order to set boxes side by side.
+
+Floating an inline or block level element will make the element behave like an inline-block element.
+
+Demo :-
+
+If you float an element left or right, the width of the element will be limited to the content it holds, unless width is defined explicitly ...
+
+You cannot float an element center. This is the biggest issue I've always seen with beginners, using float: center;, which is not a valid value for the float property. float is generally used to float/move content to the very left or to the very right. There are only four valid values for float property i.e left, right, none (default) and inherit.
+
+Parent element collapses, when it contains floated child elements, in order to prevent this, we use clear: both; property, to clear the floated elements on both the sides, which will prevent the collapsing of the parent element. For more information, you can refer my another answer here.
+
+(Important) Think of it where we have a stack of various elements. When we use float: left; or float: right; the element moves above the stack by one. Hence the elements in the normal document flow will hide behind the floated elements because it is on stack level above the normal floated elements. (Please don't relate this to z-index as that is completely different.)
+
+
+https://preview.themeforest.net/item/quickeat-restaurant-food-delivery-template/full_screen_preview/40288794?_ga=2.161677754.700743991.1666432408-2007771980.1660146695
